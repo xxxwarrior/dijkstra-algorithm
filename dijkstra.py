@@ -47,10 +47,10 @@ def search():
         cost = costs[node]
         neighbours = graph[node]
         for i in neighbours.keys():
-            new_cost = cost + neighbours[i] #if it's cheaper to go to this neighbour
-            if costs[i] > new_cost:         #by going through this node 
-                costs[i] = new_cost         #update the cost of this node
-                parents[i] = node           #this node becomes a parent for this neighbour
+            new_cost = cost + neighbours[i] 
+            if costs[i] > new_cost:         
+                costs[i] = new_cost         
+                parents[i] = node           
         processed.append(node)
         node = find_lowest_cost_node(costs)
 
