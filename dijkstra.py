@@ -66,7 +66,7 @@ def find_lowest_cost_node(costs):
     return lowest_cost_node
 
 
-def path(start, finish):
+def path(start, finish): #pass the names from graph like 'start', 'fin'
     search()
     path_ = [finish, ]
     processing = finish
@@ -77,4 +77,4 @@ def path(start, finish):
                 processing = parent
     return path_[::-1]
 
-print(path('start', 'd'))
+
