@@ -1,4 +1,4 @@
-# dijkstra_python
+# dijkstra-python
 dijkstra implementation which shows the exact path 
 
 This is a simple dijkstra algorithm implementation. 
