@@ -6,8 +6,6 @@
 #    |_____b_____d______|
 #       4     4      2
 
-
-
 graph = {
     'start': {'a': 1, 'b': 4}, 
     'a': {'b':2, 'c': 3}, 
@@ -17,10 +15,6 @@ graph = {
     'fin': {}
     } 
 
-
-
-infinity = float("inf")
-
 costs = {
     'a': 1, 
     'b': 4, 
@@ -28,7 +22,6 @@ costs = {
     'd': infinity,
     'fin': infinity
     }
-
 
 parents = {
     'a': 'start', 
@@ -39,6 +32,7 @@ parents = {
     }
 
 
+infinity = float("inf")
 processed = ["start", ]
 
 def search():
@@ -54,7 +48,6 @@ def search():
         processed.append(node)
         node = find_lowest_cost_node(costs)
 
-
 def find_lowest_cost_node(costs):
     lowest_cost = float("inf")
     lowest_cost_node = None
@@ -64,7 +57,6 @@ def find_lowest_cost_node(costs):
             lowest_cost = cost
             lowest_cost_node = node
     return lowest_cost_node
-
 
 def path(start, finish): #pass the names from the graph like 'start', 'fin'
     search()
@@ -76,5 +68,3 @@ def path(start, finish): #pass the names from the graph like 'start', 'fin'
                 path_.append(parent)
                 processing = parent
     return path_[::-1]
-
-
